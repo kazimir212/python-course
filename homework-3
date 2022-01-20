@@ -1,0 +1,15 @@
+secret_number = 7
+user_input = input("I chose a number between 1 and 10. Can you guess what that number is?\nYour number >>> ")
+
+if user_input.isdigit():
+    user_input = int(user_input)
+    if user_input < secret_number:
+        print("Your number is lower than the secret number. Please try again!")
+    elif user_input > secret_number:
+        print("Your number is HIGHER than the secret number. Please try again!")
+    elif user_input == secret_number:
+        print("CORRECT! This is the secret number!")
+    else:
+        print("ERROR! Number out of range!")
+else:
+    print("ERROR! That's not a number. Try again!")
